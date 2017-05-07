@@ -1,0 +1,35 @@
+<ion-header >
+    <!--<ion-list>
+      <ion-item class="icon ">
+        <ion-label class="" onclick="pushCategory()">
+            分类
+        </ion-label>
+
+          &lt;!&ndash; <ion-select [(ngModel)]="sort" interface="popover"   >
+              <ion-option *ngFor="let category of category_list" value="{{category.id}}">{{category.name}}</ion-option>
+            </ion-select>
+          &ndash;&gt;
+          <ion-input type="text" #searchVal (keyup.enter)="onSearch(searchVal.value)" placeholder="搜索内容" class="col7" col-7></ion-input>
+       </ion-item>
+    </ion-list>
+  -->
+    <ion-row>
+        <ion-col col-3>
+            <ion-buttons >
+                <button ion-button clear color="dark" light (click)="pushCategory()">{{cate.name}}</button>
+            </ion-buttons>
+        </ion-col>
+        <ion-col col-9>
+            <ion-input type="text" #searchVal (keyup.enter)="onSearch(searchVal.value)" placeholder="搜索内容" class="col7" col-7></ion-input>
+        </ion-col>
+    </ion-row>
+</ion-header>
+<ion-content padding class="has-header">
+  <ion-list>
+    <ion-item *ngFor="let item of knlist">
+      <h2>{{ item.title}}</h2>
+      <p>{{ item.content}}</p>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

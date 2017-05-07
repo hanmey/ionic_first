@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      分类
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<ion-grid>
+    <ion-row    *ngFor="let category of category_list" >
+        <ion-col col-12  *ngIf="getSortLevel(category.fdn) ==2" offset-1 >
+            <button ion-item (click)="pushKnList(category)" >{{category.name}}</button></ion-col>
+        <ion-col col-12  *ngIf="getSortLevel(category.fdn) ==3" offset-2 >
+            <button ion-item (click)="pushKnList(category)" >{{category.name}}</button></ion-col>
+        <ion-col col-12  *ngIf="getSortLevel(category.fdn) ==4" offset-3 >
+            <button ion-item (click)="pushKnList(category)" > {{category.name}}</button></ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>
