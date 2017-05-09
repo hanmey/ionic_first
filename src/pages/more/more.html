@@ -7,11 +7,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+    <ion-toolbar>
+      <ion-slides (ionSlideDidChange)="goToSlide()">
+        <ion-slide *ngFor="let slide of slidesList">
+          <img [src]="slide.image" class="slide-image" width="100%"/>
+          </ion-slide>
+        <ion-slide>
+          <ion-toolbar>
+          </ion-toolbar>
+          <img src="http://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+          <h2 class="slide-title">Ready to Play?</h2>
+          <button ion-button large clear icon-right color="primary">
+            Continue
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-slide>
+      </ion-slides>
+    </ion-toolbar>
 </ion-content>
+
