@@ -13,20 +13,20 @@
             <ion-item>
                 <ion-label>用户名：</ion-label>
                 <ion-input type="text" formControlName="name" placeholder="请输入用户名" value="" clearInput=true></ion-input>
-               
             </ion-item>
             <ion-item>
                 <ion-label>密 码：</ion-label>
                 <ion-input type="password"  formControlName="password" placeholder="请输入密码" value="" clearInput=true></ion-input>
             </ion-item>
-            <ion-item [hidden]="slideOneForm.valid " ><ion-note color="accesskey" >信息有误，请重新输入</ion-note></ion-item>
             <ion-item>
                 <ion-label>Gender</ion-label>
-                <ion-select [(ngModel)]="gender">
+                <ion-select formControlName="gender" interface="popover">
                     <ion-option value="f">Female</ion-option>
                     <ion-option value="m">Male</ion-option>
                 </ion-select>
             </ion-item>
+             <ion-item [hidden]="slideOneForm.valid " ><ion-note color="accesskey" >信息有误，请重新输入</ion-note></ion-item>
+           
             <ion-item>
                 <ion-buttons>
                 <button ion-button round block color="secondary" [disabled]="!slideOneForm.valid">登录</button>

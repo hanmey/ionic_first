@@ -12,7 +12,8 @@ export class NursingPage {
   constructor(public navCtrl: NavController,public formBuilder: FormBuilder) {
       this.slideOneForm = formBuilder.group({
         name: ['Nancy',Validators.compose([Validators.maxLength(30),Validators.minLength(2),Validators.required, Validators.pattern('[a-zA-Z ]*')])],
-        password: ['',Validators.compose([Validators.maxLength(18), Validators.minLength(6),Validators.required, Validators.pattern('[a-zA-Z ]*')])]
+        password: ['',Validators.compose([Validators.maxLength(18), Validators.minLength(6),Validators.required, Validators.pattern('[a-zA-Z ]*')])],
+        gender:['',Validators.compose([Validators.required])]
       },function(g:FormGroup){
             console.log('dsfsdfsdfsd');
             console.log('callback');

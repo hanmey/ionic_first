@@ -25,6 +25,8 @@ import { KnowledgeService } from '../pages/home/KnowledgeService';
 
 //加载Model
 import { HttpModule } from '@angular/http';
+
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @NgModule({
   declarations: [
     MyApp,
