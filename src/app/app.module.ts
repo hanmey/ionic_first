@@ -22,11 +22,18 @@ import {PromptService} from "../providers/PromptService";
 
 //加载知识库服务
 import { KnowledgeService } from '../pages/home/KnowledgeService';
+import { File } from '@ionic-native/file';
+import { FileChooser } from '@ionic-native/file-chooser';
 
 //加载Model
 import { HttpModule } from '@angular/http';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
+import { Transfer, FileUploadOptions, TransferObject } from '@ionic-native/transfer';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -59,7 +66,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpService,
     PromptService,
-    KnowledgeService
+    KnowledgeService,
+    File,
+    FileChooser,
+    Transfer,
+    Camera
   ],
 
 })
